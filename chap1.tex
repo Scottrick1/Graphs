@@ -1,0 +1,57 @@
+% chap1.tex (Week 1 questions)
+
+% Note that the text in the [] brackets is the one that will
+% appear in the table of contents, whilst the text in the {}
+% brackets will appear in the main thesis.
+
+\chapter[Week 1]{Week 1}
+
+\section{Q 1.2.9}
+
+\begin{enumerate}[(a)]
+\item I hate this question.
+\item And this one too.
+\end{enumerate}
+
+
+\section{Q 1.3.1}
+
+\begin{enumerate}[(a)]
+\item By definition an edge is incident to 2 and only 2 vertices, thus the sum of objects incident to any edge is 2.
+
+\item Without any restriction, the column sums of the adjancy matrix could take any value. For a simple graph the column sum has a maximum value of $v-1$ since there is a maximum of 1 edge to any vertex pair.
+\end{enumerate}
+
+\section{Q 1.6.8}
+
+\begin{enumerate}[(a)]
+\item Consider a single component graph. If one removes an edge from this graph there are two possible scenarios:\\
+1. The edge is removed, but there is at least one other edge connecting any two disjoint subgraphs and so $\omega(G)$ does not change.\\
+2. The edge was the only connection between two disjoint subgraphs and so the subgraphs become disconected and $\omega(G)$ increases by one. Since any edge can only connect two vertices, and thus only two subgraphs, it is not possible for the removal of an edge to increase $\omega(G)$ by more than one.\\
+Any multi-component graph will act the same, as we can only take a single edge away from a single component at a time.
+
+
+\item Removing a vertex can have a considerably larger effect than removing an edge. Consider the following two cases that break the equality:\\
+1. We remove a vertex that is incident with no edges. In this case, the vertex makes up an entire disconnected component of its own, and so removing it removes a component; i.e. $\omega(G-v) \leq  \omega(G)$\\
+2. We remove a vertex that is the only vertex shared by 3 different subgraphs:\\
+Let $v$ be the vertex as described and $G_x$ be a subgraph containing $v$, $x = 0,1,2.$\\
+Then we have  $G_0 \cap G_1 \cap G_2 = \{v\}$ \\
+If we remove v then we have $G_0 \cap G_1 \cap G_2 = \emptyset$ \\
+So we went from $\omega(G) = 1$ to $\omega(G) = 3$. Clearly $\omega(G-v) \geq \omega(G)+1$
+
+
+\end{enumerate}
+
+
+\section{Q 1.6.14}
+
+\begin{enumerate}[(a)]
+\item Let $G$ be simple, connected and incomplete. Consider 3 vertices $u, v,$ and $w$ with edges $uv, uw, vw \in E$   $\forall  u, v, w \in G$. Clearly each vertex in $G$ is connected to every other vertex in $G$ and so $G$ must be complete. This is a contradiction, to avoid the contradiction at least 1 of the possible set of three vertices must have the condition that at least 1 of $uv, uw, vw \notin E$
+\end{enumerate}
+
+
+\section{Q 1.7.2}
+\begin{enumerate}[(a)]
+\item Assume that $G$ is connected and acyclic. Therefore G is a tree, which means it must have $\delta = 1$. We have a contradiction and so G must contain a cycle.
+\end{enumerate}
+

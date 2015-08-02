@@ -1,0 +1,41 @@
+% Questions from week 2
+
+\chapter[Week 2]{Week 2}
+
+\section{Q 2.1.5}
+\begin{enumerate}[(a)]
+\item Since the number of edges of $G$ is constrained to $v-1$ we can construct any arbitrary connected graph by sequentially adding a vertex and edge pair to a kernel vertex. They must be added as a pair otherwise the \# edges constraint would be violated. Creating a cycle requires adding an edge between two vertices that already exist. Since we cannot at any stage do this, $G$ must be acyclic.\\
+Since $G$ is connected and acyclic, it is a tree.
+
+\item $G$ is acyclic and so it is a forest. Because it is a forest, we know that $\varepsilon(G) = v(G) - \omega(G)$ and we also have the condition that $\varepsilon(G) = v(G) - 1$. It is clear then that $\omega(G) = 1$ and therefore we have only 1 component which means that $G$ is connected.\\
+Since $G$ is acyclic and connected, it is a tree.
+
+\item $G$ is a tree which means it is acyclic and connected by definition.
+\end{enumerate}
+
+
+\section{Q 2.2.4}
+\begin{enumerate}[(a)]
+\item Since the textbook does not define a Maximal Forest, let's define it as follows:\\
+$F$ is a maximal forest of $G$ when for every component $H$ of $G$, $F \cap H$ is a spanning tree of $H$.\\
+Thus the solution is: by the definition above.
+
+\item Each component of the forest is a tree with $v_{sub}-1$ edges where $\sum_{\omega}(v_{sub}) = v(G)$, so the total number of edges of the forest epsilon(F) is simply $\sum_{\omega}(v_{sub}) - \omega* 1$, i.e. $\varepsilon(F) = v(G) - \omega(G)$.
+\end{enumerate}
+
+\section{Q 2.2.6}
+\begin{enumerate}[(a)]
+\item Assuming that there IS a cut edge, imagine two disjoint subgraphs A and B of G s.t. there is only one edge e, not in A or B, connecting the two subgraphs, i.e. $A+B+e = G$. Now consider the vertex of $A$ that is the vertex in $G$ incident with $e$, since $e$ is not included in $A$, this vertex must have an odd degree $(even number - 1 = odd number)$. However, since every other vertex in $A$ must have an even degree, this is clearly (explain!) impossible so we have a contradiction.
+
+\item Yuck. To be done.
+
+\end{enumerate}
+
+\section{Q 2.3.1}
+\begin{enumerate}[(a)]
+\item Clearly the cut edge must incident to two vertices, if we were to remove either of those vertices it would result in a loss of the edge as well. At a minimum such a cut vertex must increase the number of components by 1, but if it is also incident with other cut edges (which would also disappear) then correspondingly more components are created.
+
+\item Consider a graph with a central node that is connected to all other vertices, and each pair of outer vertices is also connected. Such a graph has no cut edge but the central node is a cut vertex - removing it would increase the number of components drastically.
+
+\end{enumerate}
+

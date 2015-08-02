@@ -1,0 +1,53 @@
+% Graph Theory Assignments
+% Declare overall type of document (use 11pt report class on A4 paper).
+\documentclass[11pt,a4paper]{report}
+
+% Include the style file which contains all the required formatting
+% information that is set out in the Research Higher Degrees Resource
+% Handbook (2003 version). NOTE: This file uses the following packages
+% 'graphicx' for graphics manipulation
+% 'fancyhdr' for nice headers and footers.
+% 'makeidx' for generating the index
+% 'tocbibind' for adding table of contents entries for bibliography, index etc.
+% 'sectsty' for generating stylised chapter and section headings.
+% You will need to make sure your LaTeX installation has these packages
+% installed...else it wont work :(
+\usepackage{enumerate}
+\usepackage{MathPhysHonoursThesis}
+
+% Need this to get rid of annoying error
+%\pgfplotsset{compat=1.12}
+
+\include{newcommands}
+
+\includeonly{
+chap1  % Assignment Questions Week 1
+,chap2  % Week 2
+% ,chap3  % Theory (Feature Extraction)
+% ,chap4  % Theory (Classification)
+% ,chap5	% Segmentation Techniques in Detail
+% ,chap6	% How we compare
+% ,chap7	% Results
+% % ,chap8	% Conclusion/Discussion
+% %,app0   % Needed to switch to appendix mode
+% ,app1   % Tables and Figures
+% ,app2   % R code
+% % % ,app3   % Python code
+% % % ,app4   % Glossary A
+% % % ,app5   % Glossary B
+% ,biby   % Makes the bibliography from the BibTeX database
+}
+
+
+
+
+
+
+\begin{document}
+
+\pagenumbering{arabic}
+
+\include{chap1}
+\include{chap2}
+
+\end{document}
