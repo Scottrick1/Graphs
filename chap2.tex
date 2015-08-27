@@ -1,6 +1,6 @@
 % Questions from week 2
 
-\chapter[Week 2]{Week 2}
+\chapter[Week 2 - Trees and Cuts]{Week 2 - Trees and Cuts}
 
 \section{Q 2.1.5}
 \begin{enumerate}[(a)]
@@ -33,7 +33,7 @@ Thus the solution is: by the definition above.
 
 \section{Q 2.3.1}
 \begin{enumerate}[(a)]
-\item Clearly the cut edge must incident to two vertices, if we were to remove either of those vertices it would result in a loss of the edge as well. At a minimum such a cut vertex must increase the number of components by 1, but if it is also incident with other cut edges (which would also disappear) then correspondingly more components are created.
+\item Clearly the cut edge must incident to two vertices, if we were to remove a vertex with $\delta>1$ (at least one of the two vertices must satisfy this, if not both) it would result in a loss of the edge as well. At a minimum such a cut vertex must increase the number of components by 1, but if it is also incident with other cut edges (which would also disappear) then correspondingly more components are created.
 
 \item Consider a graph with a central node that is connected to all other vertices, and each pair of outer vertices is also connected. Such a graph has no cut edge but the central node is a cut vertex - removing it would increase the number of components drastically.
 

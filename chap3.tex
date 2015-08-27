@@ -1,0 +1,43 @@
+% chap3.tex (Week 3 questions)
+
+% Note that the text in the [] brackets is the one that will
+% appear in the table of contents, whilst the text in the {}
+% brackets will appear in the main thesis.
+
+\chapter[Week 3 - Connectivity]{Week 3 - Connectivity}
+
+\section{Q 3.1.2}
+handshake lemma
+
+\section{Q 3.1.6}
+
+\section{Q 3.2.1}
+Forwards: A 2-edge-connected graph must have $\delta \qeg 2$. We have shown previously that any graph with $\delta \qeg 2$ must have a cycle. This means that any subgraph of $G$ must contain a cycle, and so every vertex pair lies on a common cycle. It follows then that there is an edge disjoint path between every vertex in $G$
+Backwards: $G$ has two edge-disjoint paths between any two vertices. This means every vertex pair must lie on a common cycle, and so you could remove any single edge from $G$ and it would still be connected. Thus 2-edge-connected.
+
+\section{Q 3.2.6}
+Hint: Form a new graph $G^\prime$ by adding two vertices $x$ and $y$, and joining $x$ to all vertices in $X$ and $y$ to all vertices in $Y$. Show that $G^\prime$ is 2-connected and apply theorem 3.2\\
+Theorem 3.2: A graph G with $v \geq 3$ is 2-connectd if and only if any two vertices of $G$ are connected by at least two internally-disjoint paths.\\
+
+Following the hint, we can say that $G^\prime = G + \{x\} + \{y\}$. Now, since $X$ and $Y$ must contain at least 2 vertices each, and $x$ and $y$ must be connected to every one of these vertices, in their respective sets, $d(x) \geq 2$ and $d(y) \geq 2$. There are three cases when we look for a cut vertex here:
+\begin{itemize}
+\item the cut vertex belongs to $G^\prime \cap G$, i.e. $G$, which is 2-connected. Hence $G^\prime \cap G$ remains connected, but what about $\{x\}$ and $\{y\}$? Since they have degree of at least two, and they are 2 edge-connected to $G$, they are thus 2-connected also and remain joined.
+\item the cut vertex is $x$. $x$ is removed, leaving $G + \{y\}$ which is connected.
+\item the cut vertex is $y$. Identical argument to the above.
+\end{itemize}
+So we are satisfied that $G^\prime$ is 2-connected.\\
+We can now use Th. 3.2 to say that since $G^\prime$ is 2-connected there must exist two internally disjoint paths originating at $x$ and terminating at $y$, which we will define as 
+\[
+p = \{x_p, X_{p1}, X_{p2},\ldots,G_{p1},G_{p2},\ldots,Y_{p1},Y_{p2},\ldots, y\} 
+\]
+and 
+\[
+q = \{x_q, X_{q1}, X_{q2},\ldots,G_{q1},G_{q2},\ldots,Y_{q1},Y_{q2},\ldots, y\}. 
+\]
+Clearly we can remove end elements from this path until we have $G_{.1},\ldots,G{..}$ which gives two disjoint paths connecting $X$ and $Y$.
+
+\section{Q 3.3.3}
+Find a graph with 9 vertices, 23 edges, that is 5-connected but not isomorphic to the graph $H_{5,9}$ shown in the book.
+
+Remove the edge 0,8 and add in new edge 8,2. Whereas $H_{5,9}$ is \emph{3-partite}, the new configuration is not. By some rule that I don't know, this means that the two are not isomorphic.
+
