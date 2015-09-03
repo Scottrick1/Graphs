@@ -14,6 +14,10 @@
 % installed...else it wont work :(
 \usepackage{enumerate}
 \usepackage{MathPhysHonoursThesis}
+\usepackage{float}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usetikzlibrary{arrows}
 
 % Need this to get rid of annoying error
 %\pgfplotsset{compat=1.12}
@@ -25,8 +29,8 @@ chap1  % Assignment Questions Week 1
 ,chap2  % Week 2
 ,chap3  % Theory (Feature Extraction)
 ,chap4  % Theory (Classification)
-% ,chap5	% Segmentation Techniques in Detail
-% ,chap6	% How we compare
+,chap5	% Segmentation Techniques in Detail
+,chap6	% How we compare
 % ,chap7	% Results
 % % ,chap8	% Conclusion/Discussion
 % %,app0   % Needed to switch to appendix mode
@@ -51,5 +55,7 @@ chap1  % Assignment Questions Week 1
 \include{chap2}
 \include{chap3}
 \include{chap4}
+\include{chap5}
+\include{chap6}
 
 \end{document}
